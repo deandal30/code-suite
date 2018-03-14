@@ -13,6 +13,14 @@
 // to also remove its path from "config.paths.watched".
 import "phoenix_html"
 
+window.onmount = require('onmount')
+window.moment = require('moment')
+// window.Inputmask = require('inputmask');
+
+glob('./behaviors/*', (e, files) => { files.forEach(require) })
+
+$(function () { onmount() })
+
 // Import local files
 //
 // Local files can be imported directly using relative
